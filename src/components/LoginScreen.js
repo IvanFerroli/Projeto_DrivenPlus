@@ -21,7 +21,7 @@ export default function LoginScreen() {
         LoginObjectPost
       )
       .then(() => {
-        navigate(`/hoje`);
+        navigate(`/subscriptions`);
       });
   }
 

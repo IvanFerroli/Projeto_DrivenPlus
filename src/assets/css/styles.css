@@ -116,4 +116,61 @@ main {
   background: #0e0e13;
   overflow-y: scroll;
 }
+.section-title-span{
+  position: absolute;
+  top: 29px;
+  left: 10%;
+  width: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+
+color: #FFFFFF;
+}
+.subscriptions-container{
+  position: absolute;
+  top: 91px;
+  bottom: 16px;
+  left: 10%;
+  width: 80%;
+  height: calc(100% - 107px);
+}
+.subscription{
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 180px;
+
+  margin-bottom: 10px;
+  
+  background: #0E0E13;
+  border: 3px solid #7E7E7E;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.short-logo{
+  margin-left: 16px;
+  width: 46.5%;
+max-height: 160px;
+}
+.price{
+margin-left: 20px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #FFFFFF;
+}
 
