@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+.login-screen-logo {
+  position: absolute;
+  top: 135px;
+  width: 80%;
+  margin-left: 10%;
+}
+input {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 80%;
+  height: 52px;
+  margin-left: 10%;
+
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+color: #7E7E7E;
+}
+input::placeholder {
+  position: absolute;
+  left: 4.68%;
+  right: 82.27%;
+  top: 34.62%;
+  bottom: 34.62%;
+}
+.login-email-input {
+  top: 283px;
+}
+.login-password-input {
+  top: 351px;
+}
+.signup-name-input {
+  top: 147px;
+}
+.signup-cpf-input {
+  top: 215px;
+}
+.signup-email-input {
+  top: 283px;
+}
+.signup-password-input {
+  top: 351px;
+}
+button {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 122px;
+
+  width: 80%;
+  height: 52px;
+  margin-left: 10%;
+
+  background: #ff4791;
+  border-radius: 8px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+
+  border: none;
+}
+.login-enter-button {
+  top: 427px;
+}
+.signup-button {
+  top: 427px;
+}
+.link {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 16px;
+  margin-left: 10%;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+}
+.login-link {
+  top: 503px;
+}
+.signup-link {
+  top: 503px;
+}
+main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #0e0e13;
+  overflow-y: scroll;
+}
+
