@@ -1,13 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import Routes from "../routes/Routes";
 
 import "../assets/css/reset.css";
 import "../assets/css/styles.css";
 
+import UserContext from "../context/UserContext";
+
 export default function App () {
+    const [userData, setUserData] = useState({});
     return(
         <>
-            <Routes/>
+            <UserContext.Provider value={{userData, setUserData}}>
+                <Routes/>
+            </UserContext.Provider>
         </>
     )
 }

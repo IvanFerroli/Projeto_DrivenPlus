@@ -1,12 +1,17 @@
 import axios from "axios";
-import react, { useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import UserContext from "../context/UserContext";
 
 import shortLogo1 from "../assets/img/shortLogo1.svg";
 import shortLogo2 from "../assets/img/shortLogo2.svg";
 import shortLogo3 from "../assets/img/shortLogo3.svg";
 
 export default function Subscriptions() {
+
+    const {userData} = useContext(UserContext);
+    console.log(userData)
+
     return(
         <>
             <main>

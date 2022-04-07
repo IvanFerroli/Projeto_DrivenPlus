@@ -24,7 +24,8 @@ export default function SignUpScreen() {
       )
       .then(() => {
         navigate(`/`);
-      });
+      })
+      .catch((error) => {alert("Alguma coisa deu errado. por favor, tente novamente em alguns instantes")})
   }
 
   return (
