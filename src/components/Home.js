@@ -4,17 +4,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../context/UserContext";
 
 export default function Home() {
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData, setUserData, membership, cardData } = useContext(UserContext);
   const {
     membershipId,
     cardName,
     cardNumber,
     securityNumber,
     expirationDate,
-    perks,
     image,
     userName,
-  } = userData;
+  } = userData.membership;
+  
   const token = userData.token;
   const navigate = useNavigate();
   const { id } = useParams();
@@ -31,7 +31,6 @@ export default function Home() {
       securityNumber: securityNumber,
       expirationDate: expirationDate,
     };
-
     axios
       .post(
         "https://mock-api.driven.com.br/api/v4/driven-plus/subscriptions",
@@ -63,9 +62,8 @@ export default function Home() {
         );
       });
   }
-
+  console.log(userData)
   function membershipPerks() {
-    console.log(userData);
     return (
       <>
         <section className="subscription-logo-container">

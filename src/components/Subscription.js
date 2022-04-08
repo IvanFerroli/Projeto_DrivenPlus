@@ -50,7 +50,7 @@ export default function Subscription() {
           purchaseConfirmationPost, config
         )
         .then((res) => {
-            setUserData({...userData, membership: res.data});
+            setUserData({...userData, membership: res.data, cardData: purchaseConfirmationPost});
             navigate(`/home`);
         })
         .catch((error) => {alert("Alguma coisa deu errado. por favor, tente novamente em alguns instantes")});
