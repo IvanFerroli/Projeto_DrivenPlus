@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
 import UserContext from "../context/UserContext";
 
 import logo from "../assets/img/logo.svg";
@@ -23,9 +23,9 @@ export default function LoginScreen() {
         "https://mock-api.driven.com.br/api/v4/driven-plus/auth/login",
         LoginObjectPost
       )
-      .then((data) => {
-       setUserData(data.data)
-       data.data.membership === null ? navigate(`/subscriptions`) : navigate(`/home`)
+      .then((res) => {
+       setUserData(res.data)
+       res.data.membership === null ? navigate(`/subscriptions`) : navigate(`/home`)
       })
       .catch((error) => {alert("Alguma coisa deu errado. por favor, tente novamente em alguns instantes")});
   }
@@ -61,25 +61,3 @@ export default function LoginScreen() {
     </>
   );
 }
-
-
-/* import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-function DisplayData() {
-  // initialize data state variable as an empty array
-  const [data, setData] = useState([]);
-
-  // make the fetch the first time your component mounts
-  useEffect(() => {
-    axios.get('https://mock-api.driven.com.br/api/v4/driven-plus/auth/login').then(response => setData(response.data));
-  }, []);
-
-  return (
-    <div>
-      {data.map((row) => (
-        <p key={row.id}>{row.content}</p>
-      ))}
-    </div>
-  );
-} */

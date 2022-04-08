@@ -17,18 +17,18 @@ input {
   height: 52px;
   margin-left: 10%;
 
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 16px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
 
-color: #7E7E7E;
+  color: #7e7e7e;
 }
 input::placeholder {
   position: absolute;
-  left: 4.68%;
-  right: 82.27%;
+  left: 11px;
+  right: 11px;
   top: 34.62%;
   bottom: 34.62%;
 }
@@ -49,6 +49,20 @@ input::placeholder {
 }
 .signup-password-input {
   top: 351px;
+}
+.subscriptions-card-name-input{
+  top: 397px;
+}
+.subscriptions-card-number-input{
+  top: 457px;
+}
+.subscriptions-card-security-code-input{
+  width: 48.5%;
+  left: -10%;
+}
+.subscriptions-card-expiring-date-input{
+  width: 48.5%;
+  right: 0px;
 }
 button {
   position: absolute;
@@ -80,6 +94,32 @@ button {
 }
 .signup-button {
   top: 427px;
+}
+.purchase-button{
+  top: 581px;
+}
+.cancel-button{
+  width: 100%;
+  height: 52px;
+  margin-left: 0;
+  bottom: 0;
+
+  background: #ff4747;
+}
+.change-button{
+  width: 100%;
+  height: 52px;
+  margin-left: 0;
+  top: 0;
+
+  background: #ff4791;
+}
+.perk-button{
+  width: 100%;
+  height: 52px;
+  margin-left: 0;
+
+  background: #ff4791;
 }
 .link {
   position: absolute;
@@ -115,8 +155,9 @@ main {
   bottom: 0;
   background: #0e0e13;
   overflow-y: scroll;
+  color: #ffffff;
 }
-.section-title-span{
+.section-title-span {
   position: absolute;
   top: 29px;
   left: 10%;
@@ -125,6 +166,75 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #ffffff;
+}
+.subscriptions-container {
+  position: absolute;
+  top: 91px;
+  bottom: 16px;
+  left: 10%;
+  width: 80%;
+  height: calc(100% - 107px);
+}
+.subscription {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 180px;
+
+  margin-bottom: 10px;
+
+  border: 3px solid #7e7e7e;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.short-logo {
+  margin-left: 16px;
+  width: 46.5%;
+  max-height: 160px;
+}
+.price {
+  margin-left: 20px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+}
+.half-input-container {
+  position: absolute;
+  top: 517px;
+  bottom: 98px;
+  left: 10%;
+  width: 80%;
+}
+.subscription-logo-container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  top: 87px;
+  left: 33.5%;
+  width: 33%;
+  min-width: 165px;
+}
+.subscription-logo{
+  height: 65%;
+}
+.subscription-logo-span{
+  
 
 font-family: 'Roboto';
 font-style: normal;
@@ -135,41 +245,49 @@ line-height: 38px;
 
 color: #FFFFFF;
 }
-.subscriptions-container{
+.subscriptions-info-container {
   position: absolute;
-  top: 91px;
+  top: 254px;
   bottom: 16px;
   left: 10%;
   width: 80%;
-  height: calc(100% - 107px);
 }
-.subscription{
+.price-span{
+  color: #FFFFFF;
+}
+.subscription-price{
+  color: #FFFFFF;
+}
+.price-container{
+  position: absolute;
+  top: 254px;
+  bottom: 16px;
+  left: 10%;
+  width: 80%;
+}
+.back-arrow{
+  color: #FFFFFF;
+}
+.membership-actions-container{
+  position: absolute;
+  top: 543px;
+  bottom: 12px;
+  left: 10%;
+  width: 80%;
+}
+.membership-perks-container{
+  position: absolute;
   display: flex;
+  flex-direction: space-between;
   align-items: center;
-
-  width: 100%;
-  height: 180px;
-
-  margin-bottom: 10px;
-  
-  border: 3px solid #7E7E7E;
-  box-sizing: border-box;
-  border-radius: 12px;
+  top: 176px;
+  bottom: 155px;
+  left: 10%;
+  width: 80%;
 }
-.short-logo{
-  margin-left: 16px;
-  width: 46.5%;
-max-height: 160px;
+.home-subscription-logo{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 100px;
 }
-.price{
-margin-left: 20px;
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-
-color: #FFFFFF;
-}
-

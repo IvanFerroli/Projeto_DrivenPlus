@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { useNavigate} from "react-router-dom";
+import UserContext from "../context/UserContext";
 
 export default function SignUpScreen() {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ export default function SignUpScreen() {
   const [name, setName] = useState("");
   const [cpf, setCpf] = useState("");
   let navigate = useNavigate();
+  const { userData, setUserData } = useContext(UserContext);
 
   function SignUp() {
     const SignUpPostObject = {
@@ -22,7 +24,8 @@ export default function SignUpScreen() {
         "https://mock-api.driven.com.br/api/v4/driven-plus/auth/sign-up",
         SignUpPostObject
       )
-      .then(() => {
+      .then((res) => {
+        setUserData({...userData, membership: res.data.membership});
         navigate(`/`);
       })
       .catch((error) => {alert("Alguma coisa deu errado. por favor, tente novamente em alguns instantes")})
