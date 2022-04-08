@@ -69,7 +69,7 @@ export default function Home() {
         <section className="subscription-logo-container">
           <img className="home-subscription-logo" src={image} />
         </section>
-        <h1>Olá {userName}</h1>
+        <h1>Olá {userData.name}</h1>
         <section className="membership-perks-container">
           <div>
             {userData.membership.perks.map((key, index) => (

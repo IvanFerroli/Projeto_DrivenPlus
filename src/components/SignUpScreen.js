@@ -9,7 +9,7 @@ export default function SignUpScreen() {
   const [name, setName] = useState("");
   const [cpf, setCpf] = useState("");
   let navigate = useNavigate();
-  const { userData, setUserData } = useContext(UserContext);
+  const { userData, setUserData, membership, setMembership } = useContext(UserContext);
 
   function SignUp() {
     const SignUpPostObject = {
@@ -26,6 +26,7 @@ export default function SignUpScreen() {
       )
       .then((res) => {
         setUserData({...userData, membership: res.data.membership});
+        setMembership({...membership,  userName: name})
         navigate(`/`);
       })
       .catch((error) => {alert("Alguma coisa deu errado. por favor, tente novamente em alguns instantes")})
